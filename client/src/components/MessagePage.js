@@ -146,7 +146,7 @@ const MessagePage = () => {
                   </div>
                   <div>
                   <h3 className='font-semibold text-lg my-0 text-ellipsis line-clamp-1'>{dataUser?.name}</h3>
-                  <p className='my-0 -my-1 text-sm'>{dataUser.online ? <span className='text-primary'>Online</span> : <span className='text-slate-400'>Offline</span>}</p>
+                  <p className='my-0 text-sm'>{dataUser.online ? <span className='text-primary'>Online</span> : <span className='text-slate-400'>Offline</span>}</p>
                   </div>
               </div>
 
@@ -169,6 +169,7 @@ const MessagePage = () => {
                                 msg?.imageUrl && (
                                   <img 
                                     src={msg?.imageUrl}
+                                    alt='this is nothing'
                                     className='w-full h-full object-scale-down'
                                   />
                                 )
