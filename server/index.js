@@ -10,14 +10,8 @@ const {app, server} = require("./socket/index.js")
 const port = process.env.PORT || 5000
 app.use(express.json())
 app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials: true
+    origin: `${process.env.FRONTEND_URI}`
 }))
-app.use(cookieParser())
-
-app.get('/', (request, response) => {
-    response.json({message: "Saani is Here " + port})
-})
 
 app.use('/api', router)
 
